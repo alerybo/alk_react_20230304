@@ -10,27 +10,40 @@ class Form extends Component {
     };
   }
 
-  handleChange=()=>{}
-
   render() {
     return (
       <form>
+        <label htmlFor="email">Email</label>
         <input
           name="email"
           value={this.state.email}
-          onChange={this.handleChange}
+          onChange={(e) => this.setState({ email: e.target.value })}
         />
+        <label htmlFor="firstname">First name</label>
         <input
           name="firstname"
           value={this.state.firstname}
-          onChange={this.handleChange}
+          onChange={(e) => this.setState({ firstname: e.target.value })}
         />
+        <label htmlFor="lastname">Last name</label>
         <input
           name="lastname"
           value={this.state.lastname}
-          onChange={this.handleChange}
+          onChange={(e) => this.setState({ lastname: e.target.value })}
         />
-        <button>Submit</button>
+        <button
+          onClick={() =>
+            alert(
+              this.state.email +
+                " " +
+                this.state.firstname +
+                " " +
+                this.state.lastname
+            )
+          }
+        >
+          Submit
+        </button>
       </form>
     );
   }

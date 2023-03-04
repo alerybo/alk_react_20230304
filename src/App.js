@@ -2,6 +2,7 @@ import { Component } from "react";
 import Counter from "./components/Counter";
 import Post from "./components/Post";
 import Parent from "./components/Parent";
+import Form from "./components/Form";
 
 class App extends Component {
   state = {
@@ -22,6 +23,7 @@ class App extends Component {
         <Counter />
         <Post post={this.state.post} />
         <Parent />
+        <Form />
       </div>
     );
   }
