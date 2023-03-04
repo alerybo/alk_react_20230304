@@ -2,10 +2,8 @@ import { Component } from "react";
 import Child from "./Child";
 
 class Parent extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { count: 0 };
-  }
+  state = { count: 0 };
+
   handleIncrement = () => {
     this.setState({
       count: this.state.count + 1,
